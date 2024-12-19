@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: testing-go-on-tekton-ci-gitops
+  description: This is GitOps manifest for testing-go-on-tekton-ci   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: testing-go-on-tekton-ci
+    backstage.io/kubernetes-id: testing-go-on-tekton-ci 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: testing-go-on-tekton-ci   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:testing-go-on-tekton-ci

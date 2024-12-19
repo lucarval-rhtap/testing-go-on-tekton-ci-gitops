@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: testing-go-on-tekton-ci-repository
+spec:
+  url: https://github.com/lucarval-rhtap/testing-go-on-tekton-ci
